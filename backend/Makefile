@@ -1,7 +1,7 @@
 # Variables
 IMAGE_NAME = job-assistant-backend
 CONTAINER_NAME = job-assistant-backend
-PORT = 8000
+PORT = 8080
 ENV_FILE_PATH ?= $(shell pwd)/.env
 
 # Path to your main FastAPI app
@@ -32,7 +32,7 @@ build:
 run:
 	docker run -d \
 		--name $(CONTAINER_NAME) \
-		-p $(PORT):8000 \
+		-p $(PORT):8080 \
 		-v $(ENV_FILE_PATH):/app/.env \
 		$(IMAGE_NAME)
 

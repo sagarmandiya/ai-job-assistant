@@ -16,6 +16,14 @@ class Settings(BaseSettings):
     # Hugging Face Embedding Configuration
     EMBEDDING_MODEL: str = "sentence-transformers/all-MiniLM-L6-v2"  # Free HF model
     
+    # Database Configuration
+    DATABASE_URL: str = "postgresql://postgres:postgres@localhost:5432/ai_job_assistant"
+    
+    # JWT Configuration
+    SECRET_KEY: str = "your-secret-key-change-in-production"
+    ALGORITHM: str = "HS256"
+    ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
+    
     # Other settings
     PINECONE_API_KEY: str = ""
     PINECONE_ENVIRONMENT: str = ""

@@ -19,7 +19,7 @@ class Colors:
     END = '\033[0m'
 
 class SystemTester:
-    def __init__(self, base_url="http://localhost:8000"):
+    def __init__(self, base_url="http://localhost:8080"):
         self.base_url = base_url
         self.test_results = []
         
